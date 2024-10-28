@@ -14,7 +14,7 @@ let connection = mysql.createConnection({
 
 })
 
-app.get('/curso', function(req,res){
+app.get('/', function(req,res){
     connection.query('select * from curso;',function(error, resultado){
         res.render('./curso',{dados : resultado})
     })    
